@@ -1,0 +1,7 @@
+sfdx force:source:retrieve -m LightningComponentBundle:*
+
+sfdx force:source:retrieve -m StaticResource:*
+
+
+Go to Lightning App Builder Page to add another page to Zero 2 Hero App
+https://d8y000000ga1ouac-dev-ed.lightning.force.com/lightning/setup/FlexiPageList/home

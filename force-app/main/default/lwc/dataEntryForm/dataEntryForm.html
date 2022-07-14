@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+
+        <template if:true={imageURL}>
+        <img 
+            src={imageURL} 
+            alt="Scan QR Code" 
+            height="100px" 
+            width="100px"/>
+        </template>
+
+    </lightning-card>
+
+    <lightning-card title="Create record using lightning-record-form">
+        <lightning-record-form
+        object-api-name={objectName}
+        fields={fieldList}
+        onsuccess={successHandler}
+        ></lightning-record-form>
+    </lightning-card>
+</template>
