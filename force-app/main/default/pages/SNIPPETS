@@ -1,5 +1,8 @@
 sfdx force:source:retrieve -m LightningComponentBundle:*
 
+sfdx force:source:retrieve -m customPermission:*
+
+
 sfdx force:source:retrieve -m StaticResource:*
 
 

@@ -36,5 +36,9 @@
         <members>*</members>
         <name>LightningMessageChannel</name>
     </types>
+        <types>
+        <members>*</members>
+        <name>customPermission</name>
+    </types>
     <version>49.0</version>
 </Package>
