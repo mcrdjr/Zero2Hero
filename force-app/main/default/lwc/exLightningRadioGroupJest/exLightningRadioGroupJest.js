@@ -17,11 +17,11 @@ export default class ExLightningRadioGroupJest extends LightningElement {
     // Options list to show on page
     get options() {
         return [
-            { label: 'Apple', value: 'Option1' },
-            { label: 'Banana', value: 'Option2' },
-            { label: 'Cherry', value: 'Option3' },
-            { label: 'Date', value: 'Option4' },
-            { label: 'Elderberry', value: 'Option5' },
+            { label: 'Apple', value: 'Option1-Apple' },
+            { label: 'Banana', value: 'Option2-Banana' },
+            { label: 'Cherry', value: 'Option3-Cherry' },
+            { label: 'Date', value: 'Option4-Date' },
+            { label: 'Elderberry', value: 'Option5-Elderberry' },
         ];
     }
 
