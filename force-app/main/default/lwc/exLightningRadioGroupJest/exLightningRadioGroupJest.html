@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Example Radio Group JEST" icon-name="standard:account">
+       <div class="slds-m-around_medium">
+            <lightning-radio-group name="radioGroup"
+                                   label="Select a Fruit"
+                                   options={options}
+                                   value={value}
+                                   type="radio"
+                                   onchange={handleClick}>
+            </lightning-radio-group>
+            
+            <p>Selected Value Is: {selectedValue}</p>
+       </div>
+    </lightning-card>
+ </template>
