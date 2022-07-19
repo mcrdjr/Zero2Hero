@@ -1,0 +1,38 @@
+<template>
+    <!---
+    <template if:true={opp.data}>
+        <div class="slds-m-around_medium">
+            <p>{idvalue}</p>
+        </div>
+    </template>
+    -->
+    <template if:false={opp.data}>
+        NO DATA
+    </template>
+
+    <template if:true={data}>
+    <lightning-card class="myDiv">
+        <div class="slds-text-body_medium myDiv">
+        <h1 slot="title">
+			&nbsp;&nbsp;&nbsp;&nbsp;<lightning-icon icon-name="standard:campaign" size="small"></lightning-icon>
+			&nbsp;&nbsp;<b>Campaigns&nbsp;({campsize})</b>
+        </h1>
+        </div>
+        <div style="height: 125px">
+        <lightning-datatable columns={columns} 
+                            data={data} 
+                            key-field="id"
+                            resize-column-disabled=true
+                            onrowselection={handleRowSelected}>
+                        </lightning-datatable>
+        </div>
+
+    </lightning-card>
+    </template>
+    <template if:false={data}>
+        <h1>THERE IS NO DATA</h1>
+        error:{error}   
+    </template>
+    </template>
+
+</template>

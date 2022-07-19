@@ -1,0 +1,42 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <template if:true={pelem}>
+            <p class="slds-m-bottom_small">
+                <lightning-button label="Create File" onclick={handleCreateFile}></lightning-button>
+            </p>
+    </template>
+
+<template if:true={lcardjson}>
+    <div style="height: 0px;">  
+
+    </div>
+</template>
+
+    <template if:true={lcard}>
+            <template if:true = {listDocs}>  
+                <div style="height: 0px;">  
+                    <lightning-datatable key-field="Name"  
+                                            data={listDocs}  
+                                            columns={columnsD}>  
+                    </lightning-datatable>  
+                </div>                   
+            </template>  
+    </template> 
+
+
+            <lightning-card title = "{title}">  
+                <template if:true = {listRecs}>  
+                    <div style="height: 200px;">  
+                        <lightning-datatable key-field="Id"  
+                                                data={listRecs}  
+                                                onrowselection={handleRowSelected}
+                                                columns={columns}  
+                                                onrowaction={handleRowAction}>  
+                        </lightning-datatable>  
+                    </div>                   
+                </template>  
+
+            </lightning-card>  
+
+
+</template>

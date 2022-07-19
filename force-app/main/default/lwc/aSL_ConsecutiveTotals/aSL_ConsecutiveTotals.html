@@ -1,0 +1,20 @@
+<template>
+    <!-- <lightning-card title="Consecutive Opp Payments Info">
+        <h1>Totals Years: {c1} </h1>
+        <h1>Total Consecutive Years: {c2} </h1>
+        <lightning-datatable hide-checkbox-column="true" data={contacts} columns={columns} key-field="Id">
+        </lightning-datatable>
+    </lightning-card> -->
+
+    <lightning-card title="Consecutive Opp Payments Info">
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;Totals Years: {c1} </h1>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;Total Consecutive Years: {c2} </h1>
+        <div class="slds-var-m-around_medium">
+            <template for:each={yearList} for:item="year">
+                <ul key={year} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{year}</li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+</template>

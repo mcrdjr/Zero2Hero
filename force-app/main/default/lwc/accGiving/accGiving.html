@@ -1,0 +1,27 @@
+<template>
+    <template if:true={data}>
+    <lightning-card>
+        <div class="slds-text-body_medium myDiv">
+        <h1 slot="title">
+			&nbsp;&nbsp;&nbsp;&nbsp;<lightning-icon icon-name="standard:opportunity" size="small"></lightning-icon>
+			&nbsp;&nbsp;<b>Opportunities w/Annual Fund&nbsp;({oppsize})</b>
+        </h1>
+        </div>
+        <div style="height: 125px">
+        <lightning-datatable columns={columns} 
+                            data={data} 
+                            key-field="Id"
+                            resize-column-disabled=true
+                            hide-checkbox-column>
+                        </lightning-datatable>
+        </div>
+
+    </lightning-card>
+    </template>
+    <template if:false={data}>
+        <h1>THERE IS NO DATA</h1>
+        error:{error}   
+    </template>
+    </template>
+
+</template>
