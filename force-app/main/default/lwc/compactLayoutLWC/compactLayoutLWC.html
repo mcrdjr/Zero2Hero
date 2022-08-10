@@ -1,0 +1,65 @@
+<template>
+
+<lightning-card 
+variant="narrow"
+icon-name="standard:account" >
+
+<template if:true={account}>
+<div slot="title">
+<!--Account:<br> <b>{recordId} - {aname} </b>-->
+<div id="stuff" style="display: none;">
+intCCdata:{intCCdata}</br>
+intPAdata:{intPAdata}</br>
+</div>
+Contacts:{intCC1}&nbsp;
+Sales:{intCC2}&nbsp;
+PA:{intPA1}</br>
+Account: <b>{aname}</b>
+<lightning-button-icon 
+icon-name="utility:hierarchy"  
+alternative-text="View Account Hierarchy" 
+class="slds-m-left_xx-small" 
+title="View Account Hierarchy"
+onclick={handleClick}
+></lightning-button-icon>
+<br>
+<lightning-formatted-url  value={idfield} label={aname} target="_blank"></lightning-formatted-url>
+<br>
+<div slot="timer">
+    <div style="font-size: 5px;text-align:right;">{timeVal}</div>   
+</div>
+</div>
+<div slot="actions">
+<lightning-button label="Refresh" slot="actions" onclick={handleInputFocus} ></lightning-button>
+<lightning-button label="Id" slot="actions" onclick={showInfoToast}></lightning-button>
+</div>
+
+<!--
+<lightning-record-form 
+record-id={recordId} 
+object-api-name="Account" 
+fields={fields1}
+columns="10"
+density="comfy"
+mode="readonly">
+</lightning-record-form>
+-->
+
+<div class="acc-container">
+    <lightning-record-view-form record-id={recordId} object-api-name="Account">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Website"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-output-field field-name="Industry"></lightning-output-field>
+                <lightning-output-field field-name="AnnualRevenue"></lightning-output-field>
+            </div>
+        </div>
+    </lightning-record-view-form>
+</div>
+
+</template>
+</lightning-card>
+</template>

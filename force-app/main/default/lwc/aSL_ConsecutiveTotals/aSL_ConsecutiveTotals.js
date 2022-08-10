@@ -103,7 +103,7 @@ export default class ASL_ConsecutiveTotals extends LightningElement {
 
             //console.log(getFieldValue(this.contact.data, C1) + '-' + NumOfFiscalYearsGiven.size);
             //if (getFieldValue(this.contact.data, C1) != NumOfFiscalYearsGiven.size){
-            if (c1 != NumOfFiscalYearsGiven.size){    
+            if (c1 !== NumOfFiscalYearsGiven.size){    
                 fields[C1.fieldApiName] = NumOfFiscalYearsGiven.size; 
                 //this.c1 = NumOfFiscalYearsGiven.size; 
                 console.log('C1 updated');
@@ -127,7 +127,7 @@ export default class ASL_ConsecutiveTotals extends LightningElement {
             //this.contacts = NumOfFiscalYearsGiven;
             console.log(bolUpdate);
 
-            if(bolUpdate == true){
+            if(bolUpdate === true){
                 updateRecord(recordInput)
                     .then(() => {
                         console.log('Update Okay');
