@@ -1,9 +1,6 @@
 import { LightningElement, api, wire } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
-
-import {refreshApex } from '@salesforce/apex';
-import { updateRecord } from 'lightning/uiRecordApi';
+import { getRecord } from 'lightning/uiRecordApi';
 
 const FIELDS = ['Contact.Name', 'Contact.Phone'];
 //https://developer.salesforce.com/docs/component-library/documentation/en/lwc/reference_wire_adapters_record

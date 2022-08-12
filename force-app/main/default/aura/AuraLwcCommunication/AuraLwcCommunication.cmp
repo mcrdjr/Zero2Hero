@@ -8,4 +8,4 @@
         <c:lwcAuraCommunication onsendmsg="{!c.handleMsg}" title="Hello this message is from Aura"></c:lwcAuraCommunication>
     </div>
 </lightning:card>
-</aura:component>	
+</aura:component>

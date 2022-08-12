@@ -1,5 +1,5 @@
 <apex:page lightningStylesheets="true">
-    <apex:slds/>
+    <apex:slds />
     <div class="slds-scope">
         <div class="slds-p-around_small">
             <label>Enter publish Message</label>

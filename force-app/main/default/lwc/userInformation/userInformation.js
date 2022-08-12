@@ -7,7 +7,6 @@ export default class UserInformation extends LightningElement {
 
     //other stuff 
     //https://www.w3web.net/lwc-to-get-user-of-logged-details/
-    //https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_current_user
     userId = Id;
     isGuest = IS_GUEST;
     fullname;
