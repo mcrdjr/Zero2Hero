@@ -11,7 +11,7 @@ public class ASL_GetContactOppPayments {
         //Set<String> consYears = New Set<String>();
         //Set<String> ttlconsYears = New Set<String>();
 
-        List<ASL_StartofConsecutiveYears__mdt > StartYear = [SELECT StartYear__c, EndYear__c FROM ASL_StartofConsecutiveYears__mdt Limit 1];
+        List<ASL_StartofConsecutiveYears__mdt > startYear = [SELECT StartYear__c, EndYear__c FROM ASL_StartofConsecutiveYears__mdt Limit 1];
         System.Debug('StartYear:' + StartYear[0].StartYear__c);
         String strStartYear = StartYear[0].StartYear__c;
         

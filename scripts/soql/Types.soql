@@ -1,0 +1,2 @@
+SELECT Value__c, Picklist_Key__c
+        FROM EFL_Dynamic_Picklist__mdt

@@ -1,0 +1,30 @@
+<template>
+    <!-- fileList <br> -->
+    <!-- <h2>Uploaded Files Datatable</h2> -->
+<!--     ParentIds: {parentIds} <br>
+    objectApiName: {objectApiName} <br>
+    objectName: {objectName} <br>
+    objectValue: {objectValue} <br>
+    recordId: {recordId} <br>
+    items: {items} <br> -->
+
+<!--     record-id={getIdFromParent}
+    object-api-name={getObjectApiName} -->
+
+    <template if:true={ufList}>
+        <lightning-datatable data={ufList} 
+        columns={columns} 
+        key-field="Id" 
+        hide-checkbox-column="true"
+        onsave={handleSave}
+        draft-values={draftValues}
+        onrowaction={handleRowActions}
+        show-row-number-column>
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>    
+</template>
+
+                                    

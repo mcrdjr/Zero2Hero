@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd" name="The DSC's default ruleset template" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0">
+  <description>Default ruleset template</description>
+  <rule ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts" message="Apex unit tests should System.assert() or assertEquals() or assertNotEquals()" name="ApexUnitTestClassShouldHaveAsserts">
+    <priority>4</priority>
+    <properties>
+      <property name="cc_categories" value="Bug Risk" />
+      <property name="cc_remediation_points_multiplier" value="100" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/bestpractices.xml/ApexUnitTestShouldNotUseSeeAllDataTrue" message="Apex unit tests should not use @isTest(seeAllData = true)" name="ApexUnitTestShouldNotUseSeeAllDataTrue">
+    <priority>4</priority>
+    <properties>
+      <property name="cc_categories" value="Bug Risk" />
+      <property name="cc_remediation_points_multiplier" value="100" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/bestpractices.xml/AvoidLogicInTrigger" message="Avoid logic in triggers." name="AvoidLogicInTrigger">
+    <priority>5</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="200" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/bestpractices.xml/AvoidGlobalModifier" message="Avoid using global modifier." name="AvoidGlobalModifier">
+    <priority>5</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="100" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/IfStmtsMustUseBraces" message="Avoid using if statements without curly braces" name="IfStmtsMustUseBraces">
+    <priority>2</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/WhileLoopsMustUseBraces" message="Avoid using 'while' statements without curly braces" name="WhileLoopsMustUseBraces">
+    <priority>2</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/IfElseStmtsMustUseBraces" message="Avoid using 'if...else' statements without curly braces" name="IfElseStmtsMustUseBraces">
+    <priority>2</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/ForLoopsMustUseBraces" message="Avoid using 'for' statements without curly braces" name="ForLoopsMustUseBraces">
+    <priority>2</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/VariableNamingConventions" message="{0} variable {1} should begin with {2}" name="VariableNamingConventions">
+    <priority>5</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="5" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/MethodNamingConventions" message="Method name does not begin with a lower case character." name="MethodNamingConventions">
+    <priority>5</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/codestyle.xml/ClassNamingConventions" message="Class names should begin with an uppercase character." name="ClassNamingConventions">
+    <priority>5</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="5" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/design.xml/CyclomaticComplexity" message="Concentrating too much decisional logic in a single method makes its behaviour hard to read and change." name="CyclomaticComplexity">
+    <priority>3</priority>
+    <properties>
+      <property name="methodReportLevel" value="10" />
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/performance.xml/AvoidSoqlInLoops" message="Avoid Soql queries inside loops." name="AvoidSoqlInLoops">
+    <priority>1</priority>
+    <properties>
+      <property name="cc_categories" value="Security" />
+      <property name="cc_remediation_points_multiplier" value="150" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/performance.xml/AvoidDmlStatementsInLoops" message="Avoid DML statements inside loops." name="AvoidDmlStatementsInLoops">
+    <priority>1</priority>
+    <properties>
+      <property name="cc_categories" value="Security" />
+      <property name="cc_remediation_points_multiplier" value="150" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/performance.xml/AvoidSoslInLoops" message="Avoid Sosl calls within loops." name="AvoidSoslInLoops">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Security" />
+      <property name="cc_remediation_points_multiplier" value="150" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/security.xml/ApexXSSFromURLParam" message="Apex classes should escape/sanitize Strings obtained from URL parameters." name="ApexXSSFromURLParam">
+    <priority>4</priority>
+    <properties>
+      <property name="cc_categories" value="Security" />
+      <property name="cc_remediation_points_multiplier" value="50" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/security.xml/ApexSOQLInjection" message="Avoid untrusted/unescaped variables in DML query." name="ApexSOQLInjection">
+    <priority>4</priority>
+    <properties>
+      <property name="cc_categories" value="Security" />
+      <property name="cc_remediation_points_multiplier" value="100" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/AvoidDirectAccessTriggerMap" message="Avoid directly accessing Trigger.old and Trigger.new as it can lead to a bug." name="AvoidDirectAccessTriggerMap">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/AvoidHardcodingId" message="Avoid hardcoding IDs in the Apex code." name="AvoidHardcodingId">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/EmptyCatchBlock" message="Empty Catch Block finds instances where an exception is caught, but nothing is done." name="EmptyCatchBlock">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/EmptyIfStmt" message="Empty If Statement finds instances where a condition is checked but nothing is done about it." name="EmptyIfStmt">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/EmptyStatementBlock" message="Empty block statements serve no purpose and should be removed." name="EmptyStatementBlock">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/EmptyTryOrFinallyBlock" message="Avoid empty try or finally blocks - what’s the point?" name="EmptyTryOrFinallyBlock">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/MethodWithSameNameAsEnclosingClass" message="Classes should not have non-constructor methods with the same name as the class." name="MethodWithSameNameAsEnclosingClass">
+    <priority>5</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="50" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+  <rule ref="category/apex/errorprone.xml/EmptyWhileStmt" message="Empty While Statement finds all instances where a while statement does nothing." name="EmptyWhileStmt">
+    <priority>3</priority>
+    <properties>
+      <property name="cc_categories" value="Style" />
+      <property name="cc_remediation_points_multiplier" value="1" />
+      <property name="cc_block_highlighting" value="false" />
+    </properties>
+  </rule>
+</ruleset>
